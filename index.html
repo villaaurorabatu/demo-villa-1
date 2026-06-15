@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Villa Batu - Premium Private Villa</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            900: '#064e3b',
+                            800: '#065f46',
+                            700: '#047857',
+                            600: '#059669',
+                            500: '#10b981',
+                        },
+                        gold: {
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            DEFAULT: '#d4af37',
+                        },
+                        luxury: {
+                            dark: '#0f172a',
+                            bg: '#fafaf9',
+                            card: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom styling helper for transitions and animations -->
+    <style>
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .text-glow {
+            text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-luxury-bg font-sans text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Header / Navigation -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="font-serif text-2xl font-bold tracking-wider text-white transition-colors duration-300" id="logo-text">
+                        LUXURY VILLA <span class="text-gold">BATU</span>
+                    </span>
+                </a>
+                
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-white hover:text-gold font-medium transition-colors text-sm uppercase tracking-wider navbar-link">About</a>
+                    <a href="#highlights" class="text-white hover:text-gold font-medium transition-colors text-sm uppercase tracking-wider navbar-link">Highlights</a>
+                    <a href="#facilities" class="text-white hover:text-gold font-medium transition-colors text-sm uppercase tracking-wider navbar-link">Facilities</a>
+                    <a href="#experience" class="text-white hover:text-gold font-medium transition-colors text-sm uppercase tracking-wider navbar-link">Experience</a>
+                    <a href="#gallery" class="text-white hover:text-gold font-medium transition-colors text-sm uppercase tracking-wider navbar-link">Gallery</a>
+                    <a href="#faq" class="text-white hover:text-gold font-medium transition-colors text-sm uppercase tracking-wider navbar-link">FAQ</a>
+                    <a href="#contact" class="text-white hover:text-gold font-medium transition-colors text-sm uppercase tracking-wider navbar-link">Contact</a>
+                </nav>
+
+                <!-- CTA Button (Desktop) -->
+                <div class="hidden md:block">
+                    <a href="#booking" class="bg-emerald-800 hover:bg-emerald-700 text-white font-medium px-6 py-2.5 rounded-full border border-gold/30 hover:border-gold transition-all duration-300 text-sm shadow-lg shadow-emerald-950/20 uppercase tracking-wider">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-gold focus:outline-none transition-colors" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-dropdown" class="hidden md:hidden absolute top-full left-0 w-full bg-emerald-950/95 backdrop-blur-md border-b border-emerald-900 shadow-xl transition-all duration-300">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#about" class="block text-white hover:text-gold text-lg py-2 border-b border-emerald-900/50 mobile-link">About</a>
+                <a href="#highlights" class="block text-white hover:text-gold text-lg py-2 border-b border-emerald-900/50 mobile-link">Highlights</a>
+                <a href="#facilities" class="block text-white hover:text-gold text-lg py-2 border-b border-emerald-900/50 mobile-link">Facilities</a>
+                <a href="#experience" class="block text-white hover:text-gold text-lg py-2 border-b border-emerald-900/50 mobile-link">Experience</a>
+                <a href="#gallery" class="block text-white hover:text-gold text-lg py-2 border-b border-emerald-900/50 mobile-link">Gallery</a>
+                <a href="#faq" class="block text-white hover:text-gold text-lg py-2 border-b border-emerald-900/50 mobile-link">FAQ</a>
+                <a href="#contact" class="block text-white hover:text-gold text-lg py-2 mobile-link font-semibold">Contact</a>
+                <div class="pt-4">
+                    <a href="#booking" class="block w-full text-center bg-gold hover:bg-yellow-500 text-emerald-950 font-bold py-3 rounded-xl transition-colors mobile-link">
+                        Book Your Stay
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Slider Container (Simulated premium slider) -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-luxury-bg/100 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Luxury Villa Batu" 
+                 class="w-full h-full object-cover transform scale-105 animate-[pulse_8s_infinite_alternate]"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/064e3b/ffffff?text=Luxury+Villa+Batu'">
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-20 max-w-5xl mx-auto px-4 text-center mt-12">
+            <span class="inline-block bg-emerald-900/70 backdrop-blur-md border border-gold/40 text-gold font-semibold tracking-widest text-xs sm:text-sm uppercase py-1.5 px-4 rounded-full mb-6">
+                <i class="fa-solid fa-star text-xs mr-1"></i> Welcome to Aurora Emerald Batu <i class="fa-solid fa-star text-xs ml-1"></i>
+            </span>
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-wide text-glow">
+                Private Luxury Villa <br class="hidden sm:inline">with <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-200 to-gold">Mountain View</span>
+            </h1>
+            <p class="text-slate-200 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed text-glow">
+                Nikmati pengalaman menginap eksklusif di Kota Batu dengan suasana tenang, desain elegan, dan pemandangan pegunungan yang memukau.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#booking" class="w-full sm:w-auto bg-gradient-to-r from-gold to-yellow-500 hover:from-yellow-500 hover:to-gold text-emerald-950 font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-yellow-500/20 text-center tracking-wide uppercase text-sm">
+                    <i class="fa-solid fa-calendar-check mr-2"></i> Check Availability
+                </a>
+                <a href="#booking" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/40 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-1 text-center tracking-wide uppercase text-sm">
+                    Book Your Stay <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center opacity-70 hover:opacity-100 transition-opacity">
+            <span class="text-white text-xs uppercase tracking-widest mb-2 font-light">Scroll Down</span>
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1">
+                <div class="w-1.5 h-3 bg-gold rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Section (Overlay Cards) -->
+    <section class="relative z-30 -mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 border border-slate-100 grid grid-cols-2 md:grid-cols-6 gap-6 md:gap-4 divide-y-2 md:divide-y-0 md:divide-x divide-slate-100">
+            <!-- Info Item 1 -->
+            <div class="flex flex-col items-center text-center p-2">
+                <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-800 mb-3 border border-emerald-100">
+                    <i class="fa-solid fa-house-chimney text-xl"></i>
+                </div>
+                <h4 class="font-serif font-bold text-slate-800 text-sm sm:text-base">Private Villa</h4>
+                <p class="text-xs text-slate-500 mt-1">Eksklusif & Tenang</p>
+            </div>
+            <!-- Info Item 2 -->
+            <div class="flex flex-col items-center text-center p-2 pt-6 md:pt-2">
+                <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-800 mb-3 border border-emerald-100">
+                    <i class="fa-solid fa-mountain-sun text-xl"></i>
+                </div>
+                <h4 class="font-serif font-bold text-slate-800 text-sm sm:text-base">Mountain View</h4>
+                <p class="text-xs text-slate-500 mt-1">Pemandangan Indah</p>
+            </div>
+            <!-- Info Item 3 -->
+            <div class="flex flex-col items-center text-center p-2 pt-6 md:pt-2">
+                <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-800 mb-3 border border-emerald-100">
+                    <i class="fa-solid fa-couch text-xl"></i>
+                </div>
+                <h4 class="font-serif font-bold text-slate-800 text-sm sm:text-base">Premium Interior</h4>
+                <p class="text-xs text-slate-500 mt-1">Modern & Mewah</p>
+            </div>
+            <!-- Info Item 4 -->
+            <div class="flex flex-col items-center text-center p-2 pt-6 md:pt-2">
+                <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-800 mb-3 border border-emerald-100">
+                    <i class="fa-solid fa-wifi text-xl"></i>
+                </div>
+                <h4 class="font-serif font-bold text-slate-800 text-sm sm:text-base">Free WiFi</h4>
+                <p class="text-xs text-slate-500 mt-1">Koneksi Cepat</p>
+            </div>
+            <!-- Info Item 5 -->
+            <div class="flex flex-col items-center text-center p-2 pt-6 md:pt-2">
+                <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-800 mb-3 border border-emerald-100">
+                    <i class="fa-solid fa-tv text-xl"></i>
+                </div>
+                <h4 class="font-serif font-bold text-slate-800 text-sm sm:text-base">Smart TV</h4>
+                <p class="text-xs text-slate-500 mt-1">Akses Hiburan</p>
+            </div>
+            <!-- Info Item 6 -->
+            <div class="flex flex-col items-center text-center p-2 pt-6 md:pt-2">
+                <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-800 mb-3 border border-emerald-100">
+                    <i class="fa-solid fa-square-parking text-xl"></i>
+                </div>
+                <h4 class="font-serif font-bold text-slate-800 text-sm sm:text-base">Private Parking</h4>
+                <p class="text-xs text-slate-500 mt-1">Aman & Luas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <!-- Left: Text -->
+            <div class="space-y-6">
+                <span class="text-gold uppercase tracking-wider text-sm font-semibold flex items-center gap-2">
+                    <span class="w-10 h-0.5 bg-gold inline-block"></span> Welcome to Heaven on Earth
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-900 leading-tight">
+                    Luxury Villa Batu <br>The Ultimate Escape
+                </h2>
+                <div class="w-20 h-1 bg-gold rounded-full"></div>
+                
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed pt-2">
+                    Dirancang untuk tamu yang mengutamakan kenyamanan dan privasi, <strong>Luxury Villa Batu</strong> menghadirkan pengalaman menginap yang berkelas dengan fasilitas premium dan suasana yang menenangkan.
+                </p>
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                    Lokasi strategis dengan akses mudah menuju berbagai destinasi wisata dan kuliner terbaik di Kota Batu, menjadikannya pilihan sempurna untuk melarikan diri dari hiruk-pikuk perkotaan.
+                </p>
+                
+                <div class="pt-4 grid grid-cols-2 gap-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-gold mt-1"><i class="fa-solid fa-circle-check text-lg"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Check-in Mudah</h4>
+                            <p class="text-xs text-slate-500">Proses cepat tanpa repot</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="text-gold mt-1"><i class="fa-solid fa-circle-check text-lg"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">100% Privasi</h4>
+                            <p class="text-xs text-slate-500">Seluruh area villa eksklusif Anda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Interactive Media Frame -->
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-emerald-800 to-transparent rounded-3xl opacity-20 -rotate-3 transform scale-102"></div>
+                <div class="relative bg-white p-3 rounded-3xl shadow-2xl border border-slate-100">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80" 
+                         alt="Interior Villa" 
+                         class="rounded-2xl w-full object-cover aspect-[4/3]"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/064e3b/ffffff?text=Interior+Villa'">
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-emerald-950 text-white p-4 rounded-2xl shadow-xl flex items-center space-x-3 border border-gold/30">
+                        <div class="bg-gold text-emerald-950 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-xl">
+                            5★
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-300 font-light">Rated Highly by</p>
+                            <p class="font-serif font-bold text-gold text-sm">Guest Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Villa Highlights Section -->
+    <section id="highlights" class="py-24 bg-emerald-950 text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.1),transparent)] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-0 w-64 h-64 bg-emerald-800/20 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold tracking-widest text-xs sm:text-sm uppercase font-semibold">Exquisite Experiences</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight">Villa Highlights</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <p class="text-slate-300 font-light text-base sm:text-lg">
+                    Keindahan dan kenyamanan dirancang secara harmonis untuk melengkapi liburan premium Anda di kota wisata Batu.
+                </p>
+            </div>
+
+            <!-- Highlights Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Highlight Card 1 -->
+                <div class="bg-emerald-900/40 hover:bg-emerald-900/60 transition-all duration-300 p-8 rounded-3xl border border-emerald-800/50 hover:border-gold/30 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-gold/20 to-gold/10 text-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-couch text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold">Elegant Interior</h3>
+                        <p class="text-slate-300 text-sm font-light leading-relaxed">
+                            Desain modern minimalis dengan sentuhan kemewahan yang memberikan kenyamanan maksimal.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight Card 2 -->
+                <div class="bg-emerald-900/40 hover:bg-emerald-900/60 transition-all duration-300 p-8 rounded-3xl border border-emerald-800/50 hover:border-gold/30 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-gold/20 to-gold/10 text-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-bed text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold">Premium Bedrooms</h3>
+                        <p class="text-slate-300 text-sm font-light leading-relaxed">
+                            Kamar luas dengan tempat tidur berkualitas hotel dan pemandangan pegunungan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight Card 3 -->
+                <div class="bg-emerald-900/40 hover:bg-emerald-900/60 transition-all duration-300 p-8 rounded-3xl border border-emerald-800/50 hover:border-gold/30 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-gold/20 to-gold/10 text-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-shield-halved text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold">Private Experience</h3>
+                        <p class="text-slate-300 text-sm font-light leading-relaxed">
+                            Nikmati waktu berkualitas bersama pasangan maupun keluarga tanpa gangguan luar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight Card 4 -->
+                <div class="bg-emerald-900/40 hover:bg-emerald-900/60 transition-all duration-300 p-8 rounded-3xl border border-emerald-800/50 hover:border-gold/30 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-gold/20 to-gold/10 text-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-mountain text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold">Scenic View</h3>
+                        <p class="text-slate-300 text-sm font-light leading-relaxed">
+                            Pemandangan alam Kota Batu yang dapat dinikmati langsung dari area bersantai villa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-24 bg-luxury-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold tracking-widest text-xs sm:text-sm uppercase font-semibold">Premium Amenities</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-emerald-950">Facilities</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <p class="text-slate-500 font-light text-base sm:text-lg">
+                    Manjakan diri Anda dengan jajaran fasilitas modern terlengkap demi kenyamanan menginap yang tak terlupakan.
+                </p>
+            </div>
+
+            <!-- Facilities Showcase Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Facility 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-bed text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">Premium Bedroom</span>
+                </div>
+                <!-- Facility 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-tv text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">Smart TV</span>
+                </div>
+                <!-- Facility 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-wifi text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">High Speed WiFi</span>
+                </div>
+                <!-- Facility 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-temperature-high text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">Water Heater</span>
+                </div>
+                <!-- Facility 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-kitchen-set text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">Fully Equipped Kitchen</span>
+                </div>
+                <!-- Facility 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-box text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">Refrigerator</span>
+                </div>
+                <!-- Facility 7 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-mug-hot text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">Coffee Corner</span>
+                </div>
+                <!-- Facility 8 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-fire text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">BBQ Area</span>
+                </div>
+                <!-- Facility 9 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-car text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">Private Parking</span>
+                </div>
+                <!-- Facility 10 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-800 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-umbrella-beach text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-slate-800 text-sm">Outdoor Lounge</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold tracking-widest text-xs sm:text-sm uppercase font-semibold">Perfect For Every Occasion</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-emerald-950">Tailored Experience</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <p class="text-slate-500 font-light text-base sm:text-lg">
+                    Ciptakan momen tak terlupakan yang disesuaikan dengan kebutuhan liburan istimewa Anda.
+                </p>
+            </div>
+
+            <!-- Experience Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative bg-emerald-950 rounded-3xl overflow-hidden shadow-xl aspect-[4/5] flex items-end p-8">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" 
+                         alt="Romantic Getaway" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x1000/064e3b/ffffff?text=Romantic+Getaway'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 space-y-3">
+                        <span class="text-gold uppercase tracking-widest text-xs font-semibold">Suasana Romantis</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Romantic Getaway</h3>
+                        <p class="text-slate-300 text-sm font-light">
+                            Cocok untuk pasangan yang mencari suasana tenang, intim, dan romantis untuk bulan madu atau perayaan spesial.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative bg-emerald-950 rounded-3xl overflow-hidden shadow-xl aspect-[4/5] flex items-end p-8">
+                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" 
+                         alt="Family Retreat" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x1000/064e3b/ffffff?text=Family+Retreat'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 space-y-3">
+                        <span class="text-gold uppercase tracking-widest text-xs font-semibold">Kebersamaan Keluarga</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Family Retreat</h3>
+                        <p class="text-slate-300 text-sm font-light">
+                            Tempat ideal untuk quality time bersama keluarga besar dengan area berkumpul yang luas dan fasilitas pendukung yang lengkap.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative bg-emerald-950 rounded-3xl overflow-hidden shadow-xl aspect-[4/5] flex items-end p-8">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
+                         alt="Long Stay Escape" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x1000/064e3b/ffffff?text=Long+Stay+Escape'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/30 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 space-y-3">
+                        <span class="text-gold uppercase tracking-widest text-xs font-semibold">Relaksasi Lebih Lama</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Long Stay Escape</h3>
+                        <p class="text-slate-300 text-sm font-light">
+                            Nikmati udara sejuk Batu untuk bekerja dari jauh (workcation) maupun beristirahat lebih lama dalam kedamaian.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Check Availability Form Section -->
+    <section id="booking" class="py-24 bg-gradient-to-b from-slate-900 to-emerald-950 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-emerald-900/40 backdrop-blur-md rounded-3xl p-8 sm:p-12 border border-emerald-800/80 shadow-2xl">
+                <div class="text-center mb-10 space-y-2">
+                    <span class="text-gold tracking-widest text-xs uppercase font-semibold">Check Availability & Instant Book</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold">Rencanakan Liburan Anda</h2>
+                    <p class="text-slate-300 text-sm sm:text-base">Silakan isi form di bawah untuk mengecek ketersediaan dan booking via WhatsApp.</p>
+                </div>
+
+                <!-- Live Booking Form (JS Dynamic Input) -->
+                <form id="bookingForm" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Name -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-slate-200">Nama Lengkap</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-emerald-300">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" id="bookingName" required placeholder="Masukkan nama Anda" 
+                                       class="w-full bg-emerald-950/80 border border-emerald-800 focus:border-gold focus:ring-1 focus:ring-gold rounded-xl py-3.5 pl-11 pr-4 text-white placeholder-slate-400 outline-none transition-all">
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-slate-200">Nomor Telepon (WhatsApp)</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-emerald-300">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                <input type="tel" id="bookingPhone" required placeholder="Contoh: 08123456789" 
+                                       class="w-full bg-emerald-950/80 border border-emerald-800 focus:border-gold focus:ring-1 focus:ring-gold rounded-xl py-3.5 pl-11 pr-4 text-white placeholder-slate-400 outline-none transition-all">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <!-- Check In Date -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-slate-200">Tanggal Check-In</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-emerald-300">
+                                    <i class="fa-solid fa-calendar-plus"></i>
+                                </span>
+                                <input type="date" id="checkInDate" required 
+                                       class="w-full bg-emerald-950/80 border border-emerald-800 focus:border-gold focus:ring-1 focus:ring-gold rounded-xl py-3.5 pl-11 pr-4 text-white outline-none transition-all">
+                            </div>
+                        </div>
+                        <!-- Check Out Date -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-slate-200">Tanggal Check-Out</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-emerald-300">
+                                    <i class="fa-solid fa-calendar-minus"></i>
+                                </span>
+                                <input type="date" id="checkOutDate" required 
+                                       class="w-full bg-emerald-950/80 border border-emerald-800 focus:border-gold focus:ring-1 focus:ring-gold rounded-xl py-3.5 pl-11 pr-4 text-white outline-none transition-all">
+                            </div>
+                        </div>
+                        <!-- Guests Count -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-slate-200 font-medium">Jumlah Tamu</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-emerald-300">
+                                    <i class="fa-solid fa-users"></i>
+                                </span>
+                                <select id="guestCount" required 
+                                        class="w-full bg-emerald-950/80 border border-emerald-800 focus:border-gold focus:ring-1 focus:ring-gold rounded-xl py-3.5 pl-11 pr-4 text-white outline-none transition-all appearance-none">
+                                    <option value="1-4 Orang" class="bg-emerald-950">1 - 4 Orang</option>
+                                    <option value="5-8 Orang" class="bg-emerald-950">5 - 8 Orang</option>
+                                    <option value="9-12 Orang" class="bg-emerald-950">9 - 12 Orang</option>
+                                    <option value="Lebih dari 12" class="bg-emerald-950">Lebih dari 12 Orang</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional request -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-slate-200">Permintaan Khusus (Opsional)</label>
+                        <textarea id="specialNotes" rows="3" placeholder="Contoh: Tambahan extra bed, sewa area BBQ, dll." 
+                                  class="w-full bg-emerald-950/80 border border-emerald-800 focus:border-gold focus:ring-1 focus:ring-gold rounded-xl p-4 text-white placeholder-slate-400 outline-none transition-all"></textarea>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <button type="submit" id="btnSubmitCheck" class="flex-1 bg-gradient-to-r from-gold to-yellow-500 hover:from-yellow-500 hover:to-gold text-emerald-950 font-bold py-4 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-base uppercase tracking-wider">
+                            <i class="fa-solid fa-magnifying-glass"></i> Check Availability
+                        </button>
+                        <button type="button" id="btnInstantBook" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-base uppercase tracking-wider">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Book Your Stay
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-luxury-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold tracking-widest text-xs sm:text-sm uppercase font-semibold font-medium">Visual Gallery</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-emerald-950">Villa Gallery</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <p class="text-slate-500 font-light text-base sm:text-lg">
+                    Lihat setiap keindahan sudut arsitektur kami yang modern, asri, dan menghadap langsung ke gunung.
+                </p>
+            </div>
+
+            <!-- Gallery Grid Layout with Lightbox Trigger -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-square" onclick="openLightbox(0)">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80" 
+                         alt="Exterior" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold uppercase tracking-widest text-xs font-semibold">Luxury exterior</span>
+                            <h4 class="font-serif text-lg font-bold text-white">Exterior Villa</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-square" onclick="openLightbox(1)">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" 
+                         alt="Bedroom" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold uppercase tracking-widest text-xs font-semibold">Cozy room</span>
+                            <h4 class="font-serif text-lg font-bold text-white">Premium Bedroom</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-square" onclick="openLightbox(2)">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" 
+                         alt="Living Area" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold uppercase tracking-widest text-xs font-semibold">Elegant Lounge</span>
+                            <h4 class="font-serif text-lg font-bold text-white">Living Area</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-square" onclick="openLightbox(3)">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" 
+                         alt="Kitchen" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold uppercase tracking-widest text-xs font-semibold">Modern Kitchen</span>
+                            <h4 class="font-serif text-lg font-bold text-white">Kitchen Area</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-square" onclick="openLightbox(4)">
+                    <img src="https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=600&q=80" 
+                         alt="Dining Area" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold uppercase tracking-widest text-xs font-semibold">Family Space</span>
+                            <h4 class="font-serif text-lg font-bold text-white">Dining Area</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-square" onclick="openLightbox(5)">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" 
+                         alt="Mountain View" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold uppercase tracking-widest text-xs font-semibold">Scenic View</span>
+                            <h4 class="font-serif text-lg font-bold text-white">Mountain View</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-square" onclick="openLightbox(6)">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" 
+                         alt="Night Atmosphere" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold uppercase tracking-widest text-xs font-semibold">Evening Calm</span>
+                            <h4 class="font-serif text-lg font-bold text-white">Night Atmosphere</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 (Extra Visual to make a balanced 8 grid) -->
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer aspect-square" onclick="openLightbox(7)">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80" 
+                         alt="Pool / Outdoor Lounge" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold uppercase tracking-widest text-xs font-semibold">Relaxing Area</span>
+                            <h4 class="font-serif text-lg font-bold text-white">Outdoor Lounge</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal Container -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex-col items-center justify-center p-4">
+        <!-- Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-gold text-4xl focus:outline-none transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Nav Prev -->
+        <button onclick="changeLightboxImg(-1)" class="absolute left-6 text-white hover:text-gold text-4xl focus:outline-none transition-colors">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <!-- Nav Next -->
+        <button onclick="changeLightboxImg(1)" class="absolute right-6 text-white hover:text-gold text-4xl focus:outline-none transition-colors">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <!-- Image Container -->
+        <div class="max-w-4xl max-h-[80vh] flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Zoom Image" class="max-w-full max-h-[70vh] rounded-xl object-contain shadow-2xl">
+            <h4 id="lightbox-caption" class="font-serif text-xl font-bold text-white mt-4 text-center">Caption</h4>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold tracking-widest text-xs sm:text-sm uppercase font-semibold">Verified Reviews</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-emerald-950">Testimonials</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <p class="text-slate-500 font-light text-base sm:text-lg">
+                    Apa kata mereka yang telah menikmati liburan berkelas di Luxury Villa Batu.
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-100 flex flex-col justify-between shadow-md relative">
+                    <span class="absolute top-6 right-8 text-6xl text-emerald-900/10 font-serif">“</span>
+                    <div class="space-y-4">
+                        <div class="flex text-gold space-x-1">
+                            <i class="fa-solid fa-star text-sm"></i>
+                            <i class="fa-solid fa-star text-sm"></i>
+                            <i class="fa-solid fa-star text-sm"></i>
+                            <i class="fa-solid fa-star text-sm"></i>
+                            <i class="fa-solid fa-star text-sm"></i>
+                        </div>
+                        <p class="text-slate-600 text-base italic leading-relaxed">
+                            "Tampilan villa sangat elegan dan nyaman. Cocok untuk keluarga kecil. Semua fasilitas berfungsi dengan baik dan bersih sekali."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-6 mt-6 border-t border-slate-200/60">
+                        <div class="w-12 h-12 bg-emerald-900/10 text-emerald-900 rounded-full flex items-center justify-center font-bold">
+                            AS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Andrian Syah</h4>
+                            <p class="text-xs text-slate-400">Family Guest</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-100 flex flex-col justify-between shadow-md relative">
+                    <span class="absolute top-6 right-8 text-6xl text-emerald-900/10 font-serif">“</span>
+                    <div class="space-y-4">
+                        <div class="flex text-gold space-x-1">
+                            <i class="fa-solid fa-star text-sm"></i>
+                            <i class="fa-solid fa-star text-sm"></i>
+                            <i class="fa-solid fa-star text-sm"></i>
+                            <i class="fa-solid fa-star text-sm"></i>
+                            <i class="fa-solid fa-star text-sm"></i>
+                        </div>
+                        <p class="text-slate-600 text-base italic leading-relaxed">
+                            "Pemandangannya luar biasa terutama saat pagi hari. Kabut tipis menyelimuti gunung dan udara sejuknya bikin betah stay lebih lama di sini."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-6 mt-6 border-t border-slate-200/60">
+                        <div class="w-12 h-12 bg-emerald-900/10 text-emerald-900 rounded-full flex items-center justify-center font-bold">
+                            ND
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Nadia Dania</h4>
+                            <p class="text-xs text-slate-400">Couple Retreat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-luxury-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold tracking-widest text-xs sm:text-sm uppercase font-semibold">Any Questions?</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-emerald-950">Frequently Asked Questions</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+            </div>
+
+            <!-- FAQ Wrapper -->
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-serif font-bold text-slate-800 text-base sm:text-lg">Berapa kapasitas maksimal villa?</span>
+                        <span class="text-emerald-800 faq-icon transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Kapasitas ideal kami dirancang untuk menginap nyaman hingga 12 orang. Namun, jika ada tambahan tamu, harap infokan terlebih dahulu kepada kami saat pemesanan untuk kenyamanan bersama.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-serif font-bold text-slate-800 text-base sm:text-lg">Apakah tersedia dapur lengkap?</span>
+                        <span class="text-emerald-800 faq-icon transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Ya, kami menyediakan fasilitas dapur lengkap dengan peralatan memasak, kompor, rice cooker, kulkas, peralatan makan, serta coffee corner khusus untuk Anda seduh kopi di pagi hari.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-serif font-bold text-slate-800 text-base sm:text-lg">Apakah tersedia area BBQ?</span>
+                        <span class="text-emerald-800 faq-icon transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Tentu saja. Kami menyediakan outdoor BBQ Area lengkap dengan pemanggang arang dan tempat bersantai outdoor. Sempurna untuk menikmati malam yang sejuk di Batu bersama keluarga.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-serif font-bold text-slate-800 text-base sm:text-lg">Berapa jarak ke pusat Kota Batu?</span>
+                        <span class="text-emerald-800 faq-icon transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Luxury Villa Batu terletak strategis, hanya sekitar 5-10 menit berkendara menuju pusat Kota Batu (Alun-alun Kota Batu), serta sangat dekat ke tempat wisata utama seperti Jatim Park, Museum Angkut, dan Batu Secret Zoo.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-serif font-bold text-slate-800 text-base sm:text-lg">Apakah tersedia parkir pribadi?</span>
+                        <span class="text-emerald-800 faq-icon transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Ya, kami menyediakan area parkir pribadi yang aman (private parking) di dalam kompleks villa, mampu menampung hingga 2-3 mobil dengan pengamanan area yang baik.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-20 bg-emerald-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/90 to-emerald-900/80 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80" 
+             alt="Luxury Night" 
+             class="absolute inset-0 w-full h-full object-cover opacity-25"
+             onerror="this.onerror=null; this.src='https://placehold.co/1920x600/064e3b/ffffff?text=Luxury+Night'">
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-20 space-y-6">
+            <span class="text-gold tracking-widest text-xs sm:text-sm uppercase font-semibold">Exclusive Offers</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold">Nikmati Pengalaman Menginap Premium di Kota Batu</h2>
+            <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+            <p class="text-slate-200 text-base sm:text-lg font-light max-w-2xl mx-auto">
+                Lepaskan lelah Anda dan rasakan kemewahan menginap di kaki gunung dengan udara pegunungan yang menyejukkan. Pesan sekarang untuk mengamankan tanggal pilihan Anda.
+            </p>
+            <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#booking" class="w-full sm:w-auto bg-gold hover:bg-yellow-500 text-emerald-950 font-bold px-10 py-4 rounded-full transition-all duration-300 text-center uppercase tracking-wider text-sm">
+                    Check Availability
+                </a>
+                <a href="#booking" class="w-full sm:w-auto bg-transparent border-2 border-white/60 hover:border-white text-white font-bold px-10 py-4 rounded-full transition-all duration-300 text-center uppercase tracking-wider text-sm">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold tracking-widest text-xs sm:text-sm uppercase font-semibold">Connect With Us</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-emerald-950">Contact & Location</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <p class="text-slate-500 font-light text-base sm:text-lg">
+                    Hubungi tim concierge kami untuk pertanyaan atau langsung kunjungi lokasi villa kami yang asri.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+                <!-- Contact Info Channels -->
+                <div class="lg:col-span-5 space-y-8">
+                    <h3 class="font-serif text-2xl font-bold text-emerald-950">Detail Kontak</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/6281359815703" target="_blank" class="flex items-center space-x-4 p-4 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-100/50 transition-colors group">
+                            <div class="w-12 h-12 bg-emerald-800 text-white rounded-xl flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold uppercase">WhatsApp Chat</p>
+                                <p class="font-bold text-slate-800">0813-5981-5703</p>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/aurora.villabatu" target="_blank" class="flex items-center space-x-4 p-4 rounded-2xl bg-pink-50 hover:bg-pink-100 border border-pink-100/50 transition-colors group">
+                            <div class="w-12 h-12 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white rounded-xl flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold uppercase">Instagram Profile</p>
+                                <p class="font-bold text-slate-800">@aurora.villabatu</p>
+                            </div>
+                        </a>
+
+                        <!-- Google Maps Link -->
+                        <a href="https://maps.app.goo.gl/H583Tc6mFuDVbM4a7" target="_blank" class="flex items-center space-x-4 p-4 rounded-2xl bg-sky-50 hover:bg-sky-100 border border-sky-100/50 transition-colors group">
+                            <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold uppercase">Google Maps</p>
+                                <p class="font-bold text-slate-800">Villa Aurora Emerald Batu L-11</p>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:aurora.villabatu@gmail.com" class="flex items-center space-x-4 p-4 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-100 transition-colors group">
+                            <div class="w-12 h-12 bg-slate-800 text-white rounded-xl flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold uppercase">Email Address</p>
+                                <p class="font-bold text-slate-800">aurora.villabatu@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-7 h-full">
+                    <div class="bg-white p-3 rounded-3xl shadow-xl border border-slate-100 h-full flex flex-col justify-between">
+                        <div class="rounded-2xl overflow-hidden w-full h-[350px] sm:h-[450px]">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.9947212142015!2d112.5599964757515!3d-7.895619078556633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9a10d4ef735cbb3%3A0xd606fef9fc9ca2fc!2sVilla%20Aurora%20Emerald%20Batu%20L-11!5e0!3m2!1sen!2sid!4v1781498979696!5m2!1sen!2sid" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-white border-t border-emerald-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-emerald-900/50">
+                <!-- Branding column -->
+                <div class="md:col-span-5 space-y-4">
+                    <span class="font-serif text-2xl font-bold tracking-wider text-white">
+                        LUXURY VILLA <span class="text-gold">BATU</span>
+                    </span>
+                    <p class="text-slate-300 font-light text-sm leading-relaxed max-w-sm">
+                        Eksklusivitas dan keasrian suasana pegunungan bersatu padu melahirkan harmoni kenyamanan menginap yang istimewa di kaki gunung Kota Batu.
+                    </p>
+                </div>
+
+                <!-- Quick Links column -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-lg font-bold text-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-slate-300 text-sm font-light">
+                        <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="#highlights" class="hover:text-gold transition-colors">Villa Highlights</a></li>
+                        <li><a href="#facilities" class="hover:text-gold transition-colors">Facilities</a></li>
+                        <li><a href="#experience" class="hover:text-gold transition-colors">Our Experiences</a></li>
+                        <li><a href="#gallery" class="hover:text-gold transition-colors">Visual Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Strategic Location Info -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="font-serif text-lg font-bold text-gold">Address</h4>
+                    <p class="text-slate-300 font-light text-sm leading-relaxed">
+                        Villa Aurora Emerald Batu L-11,<br>
+                        Kota Batu, Jawa Timur, Indonesia.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://www.instagram.com/aurora.villabatu" target="_blank" class="w-10 h-10 bg-emerald-900 hover:bg-emerald-800 rounded-full flex items-center justify-center text-slate-200 hover:text-gold transition-colors">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/6281359815703" target="_blank" class="w-10 h-10 bg-emerald-900 hover:bg-emerald-800 rounded-full flex items-center justify-center text-slate-200 hover:text-gold transition-colors">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/H583Tc6mFuDVbM4a7" target="_blank" class="w-10 h-10 bg-emerald-900 hover:bg-emerald-800 rounded-full flex items-center justify-center text-slate-200 hover:text-gold transition-colors">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright area -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-slate-400 text-xs sm:text-sm font-light">
+                <p>&copy; 2026 Luxury Villa Batu. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-gold">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp CTA Button -->
+    <a href="https://wa.me/6281359815703?text=Halo%20Admin%20Luxury%20Villa%20Batu,%20saya%20tertarik%20ingin%20tanya%20info%20ketersediaan%20villa." 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
+       aria-label="Contact Concierge">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileDropdown = document.getElementById('mobile-dropdown');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileDropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdown when mobile links are clicked
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDropdown.classList.add('hidden');
+            });
+        });
+
+        // 2. Header Scroll Effect
+        const header = document.getElementById('main-header');
+        const logoText = document.getElementById('logo-text');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.remove('bg-transparent', 'py-4');
+                header.classList.add('bg-emerald-950/95', 'py-3', 'shadow-lg', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('bg-emerald-950/95', 'py-3', 'shadow-lg', 'backdrop-blur-md');
+                header.classList.add('bg-transparent', 'py-4');
+            }
+        });
+
+        // 3. Set minimum dates in Booking Form automatically to prevent errors
+        const checkInInput = document.getElementById('checkInDate');
+        const checkOutInput = document.getElementById('checkOutDate');
+        
+        const today = new Date().toISOString().split('T')[0];
+        checkInInput.min = today;
+        
+        checkInInput.addEventListener('change', () => {
+            checkOutInput.min = checkInInput.value;
+        });
+
+        // 4. Booking Logic & WhatsApp Pre-formatted Redirection
+        const bookingForm = document.getElementById('bookingForm');
+        const btnInstantBook = document.getElementById('btnInstantBook');
+
+        function generateWhatsAppMessage() {
+            const name = document.getElementById('bookingName').value || '[Belum diisi]';
+            const phone = document.getElementById('bookingPhone').value || '[Belum diisi]';
+            const checkIn = document.getElementById('checkInDate').value || '[Belum diisi]';
+            const checkOut = document.getElementById('checkOutDate').value || '[Belum diisi]';
+            const guests = document.getElementById('guestCount').value;
+            const notes = document.getElementById('specialNotes').value || 'Tidak ada';
+
+            const message = `Halo Admin Luxury Villa Batu, saya ingin menanyakan ketersediaan/booking villa berikut:\n\n` +
+                            `👤 Nama: ${name}\n` +
+                            `📞 No. WhatsApp: ${phone}\n` +
+                            `📅 Check-In: ${checkIn}\n` +
+                            `📅 Check-Out: ${checkOut}\n` +
+                            `👥 Jumlah Tamu: ${guests}\n` +
+                            `📝 Catatan Tambahan: ${notes}\n\n` +
+                            `Apakah villa tersedia pada tanggal tersebut?`;
+            
+            return encodeURIComponent(message);
+        }
+
+        // Handle Check Availability
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const message = generateWhatsAppMessage();
+            window.open(`https://wa.me/6281359815703?text=${message}`, '_blank');
+        });
+
+        // Handle Instant Booking
+        btnInstantBook.addEventListener('click', () => {
+            // Trigger basic field validations
+            const name = document.getElementById('bookingName').value;
+            const phone = document.getElementById('bookingPhone').value;
+            if (!name || !phone) {
+                alertBox("Harap isi Nama dan Nomor Telepon WhatsApp Anda untuk pemesanan.");
+                return;
+            }
+            const message = generateWhatsAppMessage();
+            window.open(`https://wa.me/6281359815703?text=${message}`, '_blank');
+        });
+
+        // Non-blocking custom replacement for alert
+        function alertBox(text) {
+            const popup = document.createElement('div');
+            popup.className = "fixed top-12 left-1/2 -translate-x-1/2 bg-emerald-950 border border-gold text-white px-6 py-4 rounded-xl z-50 shadow-2xl flex items-center space-x-3 transition-opacity duration-300";
+            popup.innerHTML = `<i class="fa-solid fa-circle-info text-gold text-lg"></i> <span class="font-medium text-sm">${text}</span>`;
+            document.body.appendChild(popup);
+            setTimeout(() => {
+                popup.style.opacity = '0';
+                setTimeout(() => popup.remove(), 300);
+            }, 3000);
+        }
+
+        // 5. Gallery Lightbox Logic
+        const galleryImages = [
+            { src: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80', caption: 'Exterior Villa' },
+            { src: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80', caption: 'Premium Bedroom' },
+            { src: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80', caption: 'Living Area' },
+            { src: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80', caption: 'Kitchen Area' },
+            { src: 'https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=1200&q=80', caption: 'Dining Area' },
+            { src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80', caption: 'Mountain View' },
+            { src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80', caption: 'Night Atmosphere' },
+            { src: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80', caption: 'Outdoor Lounge' }
+        ];
+
+        let currentImgIdx = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        function openLightbox(index) {
+            currentImgIdx = index;
+            updateLightbox();
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Lock background scroll
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = ''; // Release scroll
+        }
+
+        function changeLightboxImg(direction) {
+            currentImgIdx += direction;
+            if (currentImgIdx >= galleryImages.length) currentImgIdx = 0;
+            if (currentImgIdx < 0) currentImgIdx = galleryImages.length - 1;
+            updateLightbox();
+        }
+
+        function updateLightbox() {
+            const currentImg = galleryImages[currentImgIdx];
+            lightboxImg.src = currentImg.src;
+            lightboxCaption.textContent = currentImg.caption;
+        }
+
+        // Close Lightbox on Esc key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // 6. FAQ Accordion Logic
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('.faq-icon');
+                
+                // Toggle state of current accordion item
+                content.classList.toggle('hidden');
+                
+                // Rotate icon smooth
+                if (content.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(45deg)';
+                }
+                
+                // Close other accordion items optionally to have cleaner UI
+                faqToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        const otherContent = otherToggle.nextElementSibling;
+                        const otherIcon = otherToggle.querySelector('.faq-icon');
+                        otherContent.classList.add('hidden');
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
